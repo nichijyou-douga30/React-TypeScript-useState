@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Book, Books } from './components/books';
+
+const books: Book[] = [
+  { id: 100, title: 'タイトル1' },
+  { id: 200, title: 'タイトル2' },
+  { id: 300, title: 'タイトル3' },
+];
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Books items={books} />,
   document.getElementById('root')
 );
 
